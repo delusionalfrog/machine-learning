@@ -1,5 +1,6 @@
 #include <iostream>
 #include "data.h"
+#include "model.h"
 using namespace std;
 
 int main(int argc, char **argv){
@@ -7,5 +8,6 @@ int main(int argc, char **argv){
 		return 0;
 	DataRF* drf = new DataRF();
 	drf -> loadData((char *)argv[1]);
+	RFModel 
 	return 0;
 }
