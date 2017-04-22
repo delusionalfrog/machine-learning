@@ -2,10 +2,11 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "string.h"
 using namespace std;
 
 void splitstring(string &s, const char* delim, vector<string> & v){
-	char * dup = _strdup(s.c_str());
+	char * dup = strdup(s.c_str());
 	char * token = strtok(dup, delim);
 	while(token != NULL){
 		v.push_back(string(token));
