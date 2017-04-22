@@ -5,7 +5,7 @@
 using namespace std;
 
 void splitstring(string &s, const char* delim, vector<string> & v){
-	char * dup = strdup(s.c_str());
+	char * dup = _strdup(s.c_str());
 	char * token = strtok(dup, delim);
 	while(token != NULL){
 		v.push_back(string(token));
@@ -29,7 +29,7 @@ int DataRF::loadData(char *file){
 		this -> ds.types.push_back(int(stoi(ls[0])));
 		vector<float> tmp;
 		for(int i = 0;i < ls.size() / 2;i ++){
-			tmp.push_back(stof(ls[i * 2 + 1]));
+			tmp.push_back(stof(ls[(i + 1) * 2]));
 		}
 		this -> ds.values.push_back(tmp);
 	}
